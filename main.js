@@ -63,8 +63,8 @@ function getSeek(){
     let resumeButton = document.querySelector("div[is='emby-scroller']:not(.hide) div.resumeButtonText");
     let seek = '';
     if (resumeButton) {
-        if (resumeButton.innerText.includes('恢复播放于')) {
-            seek = resumeButton.innerText.replace('恢复播放于', '');
+        if (resumeButton.innerText.includes('恢复播放')) {
+            seek = resumeButton.innerText.replace('从 ', '').replace(' 恢复播放', '');
         }
     }
     return seek;
